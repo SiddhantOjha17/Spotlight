@@ -164,7 +164,7 @@ def process_appearances(appearances, input_video_path, output_path):
 
 # # Example usage
 # if __name__ == "__main__":
-#     # Sample appearances dictionary (you'll get this from the previous tracking code)
+#   
 #     appearances = {
 #         1: [
 #             {
