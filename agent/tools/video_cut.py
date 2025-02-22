@@ -8,7 +8,6 @@ from pydantic import BaseModel, Field
 
 class VideoCutToolInput(BaseModel):
     input_video_path: str = Field(description="The path to the video file to be cut")
-    output_path: str = Field(description="The path to the output directory")
     start_time: str = Field(description="The start time of the clip in HH:MM:SS format")
     end_time: str = Field(description="The end time of the clip in HH:MM:SS format")
     track_id: int = Field(description="The ID of the tracked person")
@@ -19,11 +18,12 @@ class VideoCutTool(BaseTool):
     description: str = "A tool to cut a video based on start and end times"
     args_schema: Type[BaseModel] = VideoCutToolInput
 
-    def _run(self, input_video_path: str, output_path: str, start_time: str, end_time: str, track_id: int, appearance_num: int):
+    def _run(self, input_video_path: str,  start_time: str, end_time: str, track_id: int, appearance_num: int):
         """
         Extract a clip from the video based on start and end times
         """
         # Create output directory if it doesn't exist
+        output_path = os.path.join(os.getcwd(), "data", "output_clips")
         os.makedirs(output_path, exist_ok=True)
         
         # Open the video file

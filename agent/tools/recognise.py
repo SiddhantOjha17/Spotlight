@@ -18,6 +18,17 @@ class RecogniseTool(BaseTool):
     name: str = "RecogniseTool"
     description: str = "A tool to recognise faces in an image or video"
     args_schema: Type[BaseModel] = RecogniseToolInput
+    
+    # Add model_config to allow arbitrary types
+    model_config = {
+        "arbitrary_types_allowed": True
+    }
+    
+    # Declare these as class variables with None default
+    app: FaceAnalysis = None
+    tracker: DeepSort = None
+    appearances: dict = {}
+    current_appearances: dict = {}
 
     def __init__(self):
         super().__init__()
