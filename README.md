@@ -1,11 +1,19 @@
 # Spotlight
 
 ## Overview
-This project is a Multi-Agent System developed using CrewAI for face recognition and video processing. The system is designed to enable automated and intelligent media analysis through specialized agents.
+This project is a Conversational Multi-Agent System developed using CrewAI for face recognition and video processing. The system is designed to enable automated and intelligent media analysis through specialized agents.
 
 ### Features
-- **Face Recognition Agent**: Identifies and matches faces in images and videos, useful for security systems, photo organization, and identity verification.
-- **Video Processing Agent**: Automates video editing, including highlight creation, scene trimming, and video compilation based on user specifications.
+- **Face Recognition Agent**
+   * Identifies and matches faces across images and videos
+   * Applicable in security systems, photo organization, and identity verification
+   * Supports intelligent face matching and recognition
+
+- **Video Processing Agent**
+   * Automated video editing capabilities
+   * Highlight creation and scene trimming
+   * Intelligent video clip compilation based on user specifications
+   * Automatic unnecessary footage removal
 - **Streamlit App**: Provides a user-friendly interface for interaction and visualization.
 
 ## Installation
