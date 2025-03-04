@@ -1,4 +1,4 @@
-# Multi-Agent Face Recognition and Video Processing System
+# Spotlight
 
 ## Overview
 This project is a Multi-Agent System developed using CrewAI for face recognition and video processing. The system is designed to enable automated and intelligent media analysis through specialized agents.
